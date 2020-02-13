@@ -1,5 +1,6 @@
 package com.example.witparkingapp
 
+import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.util.Log
@@ -44,6 +45,9 @@ class LoginActivity: AppCompatActivity() {
                 if (!it.isSuccessful) return@addOnCompleteListener
 
                 Log.d("Login", "Successfully logged in: ${it.result?.user?.uid}")
+
+                val intent = Intent(this, ParkingMapActivity::class.java)
+                startActivity(intent)
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Failed to log in: ${it.message}", Toast.LENGTH_SHORT).show()
