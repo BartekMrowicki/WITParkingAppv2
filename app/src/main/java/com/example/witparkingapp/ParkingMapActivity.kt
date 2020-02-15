@@ -9,10 +9,11 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
-class ParkingMapActivity : AppCompatActivity(), OnMapReadyCallback {
+class  ParkingMapActivity :AppCompatActivity() , OnMapReadyCallback   {
 
        lateinit var mMap: GoogleMap
        lateinit var mapFragment: SupportMapFragment
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
